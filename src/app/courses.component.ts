@@ -1,5 +1,6 @@
 import {Component } from '@angular/core';
 import { componentFactoryName } from '@angular/compiler';
+import { CoursesService } from './courses.service';
 
 @Component({
     selector: 'courses',
@@ -16,6 +17,7 @@ export class CoursesCompoment {
     title = "List of courses";
     courses;
 
-    //logic for calling an http service
-
+    constructor(service: CoursesService) {
+        this.courses = service.getCourses();
+    }
 }
