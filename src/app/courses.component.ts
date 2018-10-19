@@ -14,5 +14,8 @@ import { componentFactoryName } from '@angular/compiler';
 })
 export class CoursesCompoment {
     title = "List of courses";
-    courses = ["Course 1", "Course 2", "Course 3"];
+    courses;
+
+    //logic for calling an http service
+
 }
